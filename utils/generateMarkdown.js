@@ -1,16 +1,26 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let badgeLabel = license.replace(" ", "$ensp;");
-  return `[![Generic badge](https://img.shields.io/badge/License-${badgeLabel}-green.svg)]($renderLicenseLink(license)})`
+if (license !== 'no license'){
+  return `
+  ![badge](https://img.shields.io/badge/license-${license}-blue)
+  `;
+  } else {
+    return ' ';
+  }
 };
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let linkUrl = license.toLowerCase().replace(" ", "-");
-  return `https://choosealicense.com/licenses/${linkUrl}/.`
-};
+  if (license !== 'no license') {
+    return `
+    [${license}](https://choosealicense.com/licenses/${license})
+     `;
+} else {
+  return ' ';
+}
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -30,11 +40,11 @@ function renderLicenseSection(license) {
 //  return `# ${data.title}
 
 function generateMarkdown(data) {
-  const {github, licenseChoice } = data;
+  const {github, licenseChoice, ...info} = data;
 
 return `
-
 # ${info.projectTitle}
+
 
 ## Table of Contents
 -[Description](#project-description)
@@ -44,18 +54,19 @@ return `
 -[Testing](#testing)
 
 ## Project Description
-${info.description}
-${renderLicenseSection(licenseChoice)}
+${info.projectDescription}
 
+
+${renderLicenseSection(info.license)}
 
 ## Installation
-${info.installationInstructions}
+${info.projectInstallation}
 
 ## Usage
-${info.usageInstructions}
+${info.usageInformation}
 
 ## Contribution
-${info.contributionInstructions}
+${info.contributionGuidelines}
 
 ## Testing
 ${info.testInstructions}

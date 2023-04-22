@@ -3,7 +3,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 
 // TODO: Create an array of questions for user input
@@ -61,6 +61,13 @@ const questions = [
         }
     },
 
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Please Select the License that you like to use for your project [AGPL, Apache, MIT, GPL 3.0, No License]:',
+        choices: ['AGPL', 'Apache', 'MIT', 'GPL 3.0', 'No License']
+    },
+    
     {
     type: 'input',
     name: 'projectInstallation',
