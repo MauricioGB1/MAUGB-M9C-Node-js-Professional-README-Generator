@@ -63,9 +63,9 @@ const questions = [
 
     {
         type: 'input',
-        name: 'license',
-        message: 'Please Select the License that you like to use for your project [AGPL, Apache, MIT, GPL 3.0, No License]:',
-        choices: ['AGPL', 'Apache', 'MIT', 'GPL 3.0', 'no license']
+        name: 'licenseSelection',
+        message: 'Please Select the License that you like to use for your project [isc, apache-2.0, mit, gpl-3.0, no license]:',
+        choices: ['isc', 'apache-2.0', 'mit', 'gpl-3.0', 'no license']
     },
     
     {
@@ -136,7 +136,7 @@ function writeToFile(fileName, data) {
 function init() {
 
     console.log(` Readme Generator Program!
-    Provide the required information`);
+    Please Provide the required information answer each of the questions`);
 
     inquirer.prompt(questions)
     .then(readmeData => {
