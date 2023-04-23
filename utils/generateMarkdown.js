@@ -26,25 +26,25 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
-  if (license !== "no license") {
-    return  `
-    ## [License](#table-ofcontents)
-
-    This Application uses the following license:
-
-    ${renderLicenseLink(license)}
-    `;  
-  } else {
+  if (license === "no license") {
     return " ";
+  } else {
+    return `
+    ### License
+    ${license}
+    ${renderLicenseBadge(license)}`
   }
 };
+    
+
+
 
 
 // TODO: Create a function to generate markdown for README
 //  return `# ${data.title}
 
 function generateMarkdown(data) {
-  const {github, licenseChoice, ...info} = data;
+  const {github, licenseSelection, ...info} = data;
 
 return `
 # ${info.projectTitle}
@@ -59,9 +59,8 @@ return `
 
 ## Project Description
 ${info.projectDescription}
+${renderLicenseSection(licenseSelection)}
 
-
-${renderLicenseSection(info.license)}
 
 ## Installation
 ${info.projectInstallation}
