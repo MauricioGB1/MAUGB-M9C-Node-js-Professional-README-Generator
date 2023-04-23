@@ -26,12 +26,16 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
-  if (license === "None") {
-    return " ";
+  if (license !== "no license") {
+    return  `
+    ## [License](#table-ofcontents)
+
+    This Application uses the following license:
+
+    ${renderLicenseLink(license)}
+    `;  
   } else {
-    return `### Licensing
-    ${license}
-    ${renderLicenseBadge(license)}`
+    return " ";
   }
 };
 
@@ -47,11 +51,11 @@ return `
 
 
 ## Table of Contents
--[Description](#project-description)
--[Installation](#installation)
--[Usage](#usage)
--[Contribution](#contribution)
--[Testing](#testing)
+- [Description](#project-description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Testing](#testing)
 
 ## Project Description
 ${info.projectDescription}
@@ -75,3 +79,4 @@ ${info.testInstructions}
 }
 
 module.exports = generateMarkdown;
+
