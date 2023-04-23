@@ -65,7 +65,7 @@ const questions = [
         type: 'input',
         name: 'license',
         message: 'Please Select the License that you like to use for your project [AGPL, Apache, MIT, GPL 3.0, No License]:',
-        choices: ['AGPL', 'Apache', 'MIT', 'GPL 3.0', 'No License']
+        choices: ['AGPL', 'Apache', 'MIT', 'GPL 3.0', 'no license']
     },
     
     {
