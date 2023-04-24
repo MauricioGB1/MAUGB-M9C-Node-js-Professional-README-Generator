@@ -87,7 +87,7 @@ ${info.contributionGuidelines}
 ## Testing
 ${info.testInstructions}
 
-## For Additional Questions, please contact:
+## Contact Information:
 ${info.githubUser}
 
 ${info.emailUser}

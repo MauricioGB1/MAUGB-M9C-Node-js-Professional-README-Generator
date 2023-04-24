@@ -65,7 +65,7 @@ If you would like to contribute please send an e-mail to gomeb_mauricio@hotmail.
 ## Testing
 For recommended text instructions please contact administrator gomeb_mauricio@hotmail.com
 
-## For Additional Questions, please contact:
+## Contact Information:
 https://github.com/MauricioGB1
 
 gomezb_mauricio@hotmail.com
