@@ -9,31 +9,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
 
-    {
-    type: 'input',
-    name: 'github',
-    message: 'Please provide you GiHub Repository Username',
-    validate: githubInput => {
-        if (githubInput) {
-            return true;}
-        else {
-        console.log('Please provide your GiHub Repository Username to continue!');
-        return false;}  
-        }
-    },
 
-    {
-    type: 'input',
-    name: 'email',
-    message: 'Please provide your e-mail address:',
-    validate: emailInput => {
-        if (emailInput) {
-            return true;}
-        else {
-        console.log('Please provide your GiHub user name to continue!');
-            return false;}  
-        }
-    },
+
     
     {
     type: 'input',
@@ -63,9 +40,61 @@ const questions = [
 
     {
         type: 'input',
+        name: 'projectMotivation',
+        message: 'Please provide your What was your motivation for this project:',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;}
+            else {
+            console.log('Please provide your What was your motivation for this project!');
+                return false;}  
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'projectSolving',
+            message: 'Please provide your what does this project solves?',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;}
+                else {
+                console.log('Please provide your what does this project solves?');
+                return false;}  
+                }
+            },
+        
+            {
+                type: 'input',
+                name: 'projectWhy',
+                message: 'Please provide your why did you buid this project?',
+                validate: githubInput => {
+                    if (githubInput) {
+                        return true;}
+                    else {
+                    console.log('Please provide your why did you buid this project?');
+                    return false;}  
+                    }
+                },
+
+            {
+                type: 'input',
+                name: 'projectLearning',
+                message: 'Please provide your what did you learn?',
+                validate: githubInput => {
+                    if (githubInput) {
+                        return true;}
+                    else {
+                    console.log('Please provide your what did you learn?');
+                    return false;}  
+                    }
+                },
+
+    {
+        type: 'list',
         name: 'licenseSelection',
-        message: 'Please Select the License that you like to use for your project [isc, apache-2.0, mit, gpl-3.0, no license]:',
-        choices: ['isc', 'apache-2.0', 'mit', 'gpl-3.0', 'no license']
+        message: 'Please Select the License that you like to use for your project [ISC, Apache 2.0, MIT, GPL 3.0, no license]:',
+        choices: ['ISC', 'Apache 2.0', 'MIT', 'GPL 3.0', 'no license']
     },
     
     {
@@ -95,6 +124,19 @@ const questions = [
     }, 
 
     {
+        type: 'input',
+        name: 'projectCredits',
+        message: 'Enter usage Credits of your project:',
+        validate: usageInformationInput => {
+            if (usageInformationInput) {
+                return true;}
+            else {
+            console.log('Please enter Credits Information!');
+                    return false;}  
+            }
+        }, 
+    
+    {
     type: 'input',
     name: 'contributionGuidelines',
     message: 'Enter Contribution Guidelines:',
@@ -120,6 +162,32 @@ const questions = [
         }
     },         
 
+    {
+        type: 'input',
+        name: 'emailUser',
+        message: 'Enter your e-mail address:',
+        validate: testInstructionsInput => {
+            if (testInstructionsInput) {
+                return true;}
+            else {
+            console.log('Please enter your e-mail address!');
+                    return false;}  
+            }
+        },    
+
+        {
+            type: 'input',
+            name: 'githubUser',
+            message: 'Enter your GitHub Address:',
+            validate: testInstructionsInput => {
+                if (testInstructionsInput) {
+                    return true;}
+                else {
+                console.log('Please enter your GitHub Address!');
+                        return false;}  
+                }
+            },    
+
 ];
 
 // TODO: Create a function to write README file
@@ -135,7 +203,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
 
-    console.log(` Readme Generator Program!
+    console.log(` Professional Readme Generator Program!
     Please Provide the required information answer each of the questions`);
 
     inquirer.prompt(questions)
