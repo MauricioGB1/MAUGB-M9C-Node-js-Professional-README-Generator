@@ -1,5 +1,5 @@
 
-# a
+# Professional README Generator (NodeJS)
 
 
 ## Table of Contents
@@ -11,46 +11,46 @@
 
 
 ## Project Description
-s
+This program helps the user to generate an automatic README professional file; user will be prompted with specific question that has to answer in order the program to generate the file.
 
-d
+Practical use of NodeJS , interacting with Inquire package and fs to create a Readme file.
 
-f
+This program helps to create repetitive and automatic creation of professional README file, getting input from user and then generating the file.
 
-g
+ This program shows the use of NodeJS as backend JavaScript to be able to execute the JavaScript code outside of a web browser. This program allows us to utilize additional packages to write the files on a Markdown to prepare the structure of the Readme file. 
 
-e
+Use of NodeJS to write the main index file using JavaScript and Node JS; Install and use of npm package inquirer@8.2.4 for this application. Also, the use of fs package to write a file in this case the Readme file.
 
 
 
 ## License
-    ISC
+    MIT
     
-  [![Generic badge](https://img.shields.io/badge/License-ISC-green.svg)](https://choosealicense.com/licenses/isc/.)
+  [![Generic badge](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/.)
   
 
 
 ## Installation
-f
+This program runs under node.js.  Repository location https://github.com/MauricioGB1/MAUGB-M9C-Node-js-Professional-README-Generator.   Proceed to clone this repository.  Open in integrated terminal and then run : node index.js
 
 
 
 ## Usage
-d
+Use for NodeJS environment, Markdown application.
 
 
 
 ## Credits
-d
+Generate license badge: https://shields.io/ .   Guide to create the Markdown file: https://www.markdownguide.org/getting-started/  . Open source licenses permission to be use for this program: ahttps://choosealicense.com/licenses/  . Use of inquirer@8.2.4 package.
 
 
 
 ## Contribution
-d
+If you would like to contribute please send an e-mail to gomezb_mauricio@hotmail.com. Please share your GitHub repository name and your message.
 
 
 ## Testing
-d
+For recommended text instructions please contact administrator gomeb_mauricio@hotmail.com
 
 ## Contact Information:
 https://github.com/MauricioGB1
