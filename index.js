@@ -9,8 +9,6 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
 
-
-
     
     {
     type: 'input',
@@ -67,12 +65,12 @@ const questions = [
             {
                 type: 'input',
                 name: 'projectWhy',
-                message: 'Please provide your why did you buid this project?',
+                message: 'Please provide your why did you build this project?',
                 validate: githubInput => {
                     if (githubInput) {
                         return true;}
                     else {
-                    console.log('Please provide your why did you buid this project?');
+                    console.log('Please provide your why did you build this project?');
                     return false;}  
                     }
                 },
