@@ -21,6 +21,9 @@ This program shows the use of NodeJS as backend JavaScript to be able to execute
 
 Use of NodeJS to write the main index file using JavaScript and Node JS; Install and use of npm package inquirer@8.2.4 for this application. Also, the use of fs package to write a file in this case the Readme file.
 
+DEMO- Video
+
+https://github.com/MauricioGB1/MAUGB-M9C-Node-js-Professional-README-Generator/tree/main/video-demo
 
 
 Input from user 
